@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(to bottom, #1E3C72, #44619a);
+    min-height: 100vh;
+}
+#main{
+    color: white;
+
+}
+img{
+    height: 50px;
+    width: 100px;
+}
+footer{
+    position: absolute;
+    bottom: 0px;
+}
+input{
+    border-radius: 5px;
+    height: 32px;
+}
+select{
+    width: 200px;
+    border-radius: 5px;
+    height: 32px;
+}
+
+

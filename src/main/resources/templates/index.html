@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">System Zarządzania Restauracją</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="container p-4 bg-dark text-white">
+    <section class="col-12">
+        <h2>Dokonaj Rezerwacji</h2>
+        <form method="post" action="/reserve">
+            <label>Imię:</label>
+            <input type="text" name="firstName" required>
+            <label>Nazwisko:</label>
+            <input type="text" name="lastName" required>
+            <label>Status:</label>
+            <select name="status">
+                <option value="student">Student</option>
+                <option value="pracownik">Pracownik</option>
+                <option value="gosc">Gość</option>
+            </select>
+            <input type="submit" value="Rezerwuj">
+        </form>
+    </section>
+
+    <section class="col-12 mt-4">
+        <h3>Miejsce w kolejce:</h3>
+        <p th:if="${queuePosition != null}">Twoje miejsce w kolejce: <strong th:text="${queuePosition}"></strong></p>
+        <p>Łączna liczba rezerwacji: <strong th:text="${queueSize}"></strong></p>
+    </section>
+</main>
+
+<footer class="container-fluid bg-dark text-white text-center p-3">
+    <p>Znajdź mnie na: <a href="https://github.com/ArdentxX" class="text-white text-decoration-none">GitHub</a></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
