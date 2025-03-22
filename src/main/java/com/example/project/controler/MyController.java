@@ -10,25 +10,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Controller
 public class MyController {
 
-    private final Queue queue = new Queue();
-
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("queueSize", queue.getSize());
-        return "index";
-    }
-
-    @PostMapping("/reserve")
-    public String reserve(
-            @RequestParam("firstName") String firstName,
-            @RequestParam("lastName") String lastName,
-            @RequestParam("status") String status,
-            Model model) {
-
-        int position = queue.addPerson(firstName, lastName, status);
-        model.addAttribute("queuePosition", position);
-        model.addAttribute("queueSize", queue.getSize());
-
         return "index";
     }
 }
