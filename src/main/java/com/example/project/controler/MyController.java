@@ -14,4 +14,8 @@ public class MyController {
     public String index(Model model) {
         return "index";
     }
+    @GetMapping("/reserve")
+    public String reserve(Model model) {
+        return "reserve";
+    }
 }
