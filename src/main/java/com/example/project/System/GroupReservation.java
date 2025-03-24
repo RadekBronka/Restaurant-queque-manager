@@ -1,4 +1,5 @@
 package com.example.project.System;
 
-public class GroupReservation {
+public class GroupReservation extends Reservation {
+
 }
