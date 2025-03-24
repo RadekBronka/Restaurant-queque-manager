@@ -31,16 +31,22 @@ public class MyController {
             @RequestParam String email,
             @RequestParam String date,
             @RequestParam String time,
+            @RequestParam String status,
             @RequestParam String rodzaj,
-            @RequestParam(required = false, defaultValue = "1") int groupSize) {
+            @RequestParam(required = false) Integer groupSize) {
 
         Reservation reservation = new Reservation();
         reservation.setCustomerId(idCounter.getAndIncrement());
         reservation.setCustomerName(firstName);
         reservation.setCustomerSurname(lastName);
         reservation.setCustomerEmail(email);
-        reservation.setCustomerCount(groupSize);
         reservation.changeStatus((byte) 0);
+
+        if ("Grupowa".equals(rodzaj) && groupSize != null) {
+            reservation.setCustomerCount(groupSize);
+        } else {
+            reservation.setCustomerCount(1); // Dla rezerwacji samotnej domyślnie 1 osoba
+        }
 
         String dateTime = date + "T" + time + ":00";
         reservation.setCustomerNumber(LocalDateTime.parse(dateTime, DateTimeFormatter.ISO_LOCAL_DATE_TIME).getHour());
@@ -50,3 +56,4 @@ public class MyController {
         return "redirect:/reserve?success=true";
     }
 }
+
