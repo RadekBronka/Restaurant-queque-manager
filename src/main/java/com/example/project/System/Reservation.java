@@ -1,8 +1,11 @@
 package com.example.project.System;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Reservation {
+    @JsonIgnore
+    private boolean active;
 
     @JsonProperty("customerId")
     private int customerId;

@@ -1,5 +1,4 @@
 [ {
-  "active" : true,
   "customerId" : 1,
   "customerCount" : 2,
   "customerNumber" : 123456789,
@@ -8,21 +7,27 @@
   "customerEmail" : "jan.kowalski@example.com",
   "reservationStatus" : 1
 }, {
-  "active" : false,
   "customerId" : 1,
-  "customerCount" : 1,
-  "customerNumber" : 21,
-  "customerName" : "Kacper",
-  "customerSurname" : "Pabian",
-  "customerEmail" : "kipek2004@gmail.com",
+  "customerCount" : 2,
+  "customerNumber" : 11,
+  "customerName" : "LujiHQ",
+  "customerSurname" : "sdsd",
+  "customerEmail" : "kacper.pabian@pg1.brzesko.pl",
   "reservationStatus" : 0
 }, {
-  "active" : false,
   "customerId" : 2,
-  "customerCount" : 5,
+  "customerCount" : 1,
   "customerNumber" : 21,
-  "customerName" : "SSSS",
+  "customerName" : "LujiHQ",
+  "customerSurname" : "sdsd",
+  "customerEmail" : "kacper.pabian@pg1.brzesko.pl",
+  "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerCount" : 2,
+  "customerNumber" : 19,
+  "customerName" : "Kacper",
   "customerSurname" : "Pabian",
-  "customerEmail" : "kipek2004@gmail.com",
+  "customerEmail" : "kacperpabian@student.agh.edu.pl",
   "reservationStatus" : 0
 } ]
