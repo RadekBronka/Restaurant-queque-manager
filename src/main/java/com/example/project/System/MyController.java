@@ -52,6 +52,7 @@ public class MyController {
         reservation.setCustomerNumber(LocalDateTime.parse(dateTime, DateTimeFormatter.ISO_LOCAL_DATE_TIME).getHour());
 
         reservationService.addReservation(reservation);
+        System.out.println(reservation);
 
         return "redirect:/reserve?success=true";
     }

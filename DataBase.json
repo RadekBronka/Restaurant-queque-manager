@@ -1,0 +1,28 @@
+[ {
+  "active" : true,
+  "customerId" : 1,
+  "customerCount" : 2,
+  "customerNumber" : 123456789,
+  "customerName" : "Jan",
+  "customerSurname" : "Kowalski",
+  "customerEmail" : "jan.kowalski@example.com",
+  "reservationStatus" : 1
+}, {
+  "active" : false,
+  "customerId" : 1,
+  "customerCount" : 1,
+  "customerNumber" : 21,
+  "customerName" : "Kacper",
+  "customerSurname" : "Pabian",
+  "customerEmail" : "kipek2004@gmail.com",
+  "reservationStatus" : 0
+}, {
+  "active" : false,
+  "customerId" : 2,
+  "customerCount" : 5,
+  "customerNumber" : 21,
+  "customerName" : "SSSS",
+  "customerSurname" : "Pabian",
+  "customerEmail" : "kipek2004@gmail.com",
+  "reservationStatus" : 0
+} ]
