@@ -30,4 +30,12 @@
   "customerSurname" : "Pabian",
   "customerEmail" : "kacperpabian@student.agh.edu.pl",
   "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerCount" : 2,
+  "customerNumber" : 11,
+  "customerName" : "adsf",
+  "customerSurname" : "adsfsad",
+  "customerEmail" : "lui3pytoficial@gmail.com",
+  "reservationStatus" : 0
 } ]

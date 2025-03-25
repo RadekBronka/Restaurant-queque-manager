@@ -1,4 +1,5 @@
 package com.example.project.System;
 
-public class ReservationVIP {
+public class ReservationVIP extends Reservation {
+
 }
