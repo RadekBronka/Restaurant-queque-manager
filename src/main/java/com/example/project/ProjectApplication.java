@@ -1,14 +1,27 @@
 package com.example.project;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class ProjectApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ProjectApplication.class, args);
-        System.out.println("Hello World");
-    }
+    private static boolean javafxStarted = false;
 
+    public static void main(String[] args) {
+        ConfigurableApplicationContext context = new SpringApplicationBuilder(ProjectApplication.class)
+                .headless(false)
+                .run(args);
+
+        // Zabezpieczenie przed wielokrotnym uruchomieniem JavaFX
+        if (!javafxStarted) {
+            javafxStarted = true;
+            try {
+                JavaFxApp.startApp(context);
+            } catch (IllegalStateException e) {
+                System.out.println("JavaFX już działa — kontynuuję backend!");
+            }
+        }
+    }
 }
