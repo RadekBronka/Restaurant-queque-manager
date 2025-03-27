@@ -30,6 +30,8 @@ public class Reservation {
     // 0 - oczekująca
     // 1 - zatwierdzona
     // 2 - anulowana
+    @JsonProperty("reservationTime")
+    private String reservationTime;
 
     // Domyślny konstruktor wymagany przez Jacksona
     public Reservation() {}
@@ -99,5 +101,11 @@ public class Reservation {
     // Sprawdzenie, czy rezerwacja ma status "zatwierdzona"
     public boolean isActive() {
         return this.reservationStatus == 1;
+    }
+    public void setReservationTime(String reservationTime) {
+        this.reservationTime = reservationTime;
+    }
+    public String getReservationTime() {
+        return this.reservationTime;
     }
 }

@@ -49,7 +49,7 @@ public class MyController {
         }
 
         String dateTime = date + "T" + time + ":00";
-        reservation.setCustomerNumber(LocalDateTime.parse(dateTime, DateTimeFormatter.ISO_LOCAL_DATE_TIME).getHour());
+        reservation.setReservationTime(dateTime);
 
         reservationService.addReservation(reservation);
         System.out.println(reservation);
