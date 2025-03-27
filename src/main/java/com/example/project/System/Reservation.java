@@ -32,7 +32,8 @@ public class Reservation {
     // 2 - anulowana
     @JsonProperty("reservationTime")
     private String reservationTime;
-
+    @JsonProperty("reservationDate")
+    private String reservationDate;
     // Domyślny konstruktor wymagany przez Jacksona
     public Reservation() {}
 
@@ -107,5 +108,12 @@ public class Reservation {
     }
     public String getReservationTime() {
         return this.reservationTime;
+    }
+    public void setReservationDate(String reservationDate) {
+        this.reservationDate = reservationDate;
+
+    }
+    public String getReservationDate() {
+        return this.reservationDate;
     }
 }

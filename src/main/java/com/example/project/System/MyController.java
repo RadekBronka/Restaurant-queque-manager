@@ -49,7 +49,8 @@ public class MyController {
         }
 
         String dateTime = date + "T" + time + ":00";
-        reservation.setReservationTime(dateTime);
+        reservation.setReservationTime(time);
+        reservation.setReservationDate(date);
 
         reservationService.addReservation(reservation);
         System.out.println(reservation);
