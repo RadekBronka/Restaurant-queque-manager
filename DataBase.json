@@ -1,23 +1,37 @@
 [ {
   "customerId" : 1,
-  "customerCount" : 2,
   "customerNumber" : 457036,
+  "reservationType" : null,
+  "customerCount" : 2,
   "customerName" : "Kacper",
   "customerSurname" : "Pabian",
   "customerEmail" : "kipek2004@gmail.com",
   "reservationRank" : "vip",
-  "reservationStatus" : 0,
   "reservationTime" : "18:31",
-  "reservationDate" : "2025-03-29"
+  "reservationDate" : "2025-03-29",
+  "reservationStatus" : 0
 }, {
   "customerId" : 1,
-  "customerCount" : 2,
   "customerNumber" : 479519,
+  "reservationType" : null,
+  "customerCount" : 2,
   "customerName" : "Kacper",
   "customerSurname" : "Pabian",
   "customerEmail" : "kipek2004@gmail.com",
   "reservationRank" : "vip",
-  "reservationStatus" : 0,
   "reservationTime" : "18:31",
-  "reservationDate" : "2025-03-29"
+  "reservationDate" : "2025-03-29",
+  "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerNumber" : 986884,
+  "reservationType" : "Grupowa",
+  "customerCount" : 5,
+  "customerName" : "adsf",
+  "customerSurname" : "adsfsad",
+  "customerEmail" : "lui3pytoficial@gmail.com",
+  "reservationRank" : "vip",
+  "reservationTime" : "12:37",
+  "reservationDate" : "2025-03-30",
+  "reservationStatus" : 0
 } ]
