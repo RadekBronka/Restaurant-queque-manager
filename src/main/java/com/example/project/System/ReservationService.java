@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReservationService {
-    private static final String FILE_PATH = "DataBase.json";
+    private static final String FILE_PATH = "src/main/resources/DataBase.json";
     private List<Reservation> reservations;
 
     public ReservationService() {
