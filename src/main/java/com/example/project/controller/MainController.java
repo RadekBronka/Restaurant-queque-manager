@@ -46,7 +46,7 @@ public class MainController {
 
         String selectedDateStr = selectedDate.toString();
 
-        // Filtrujemy rezerwacje, ale najpierw sprawdzamy, czy reservationDate nie jest null
+        // Filtrujemy rezerwacje, ale najpierw sprawdzamy, czy reservationDate nie jest nu ll
         List<Reservation> filtered = reservations.stream()
                 .filter(r -> r.getReservationDate() != null && r.getReservationDate().equals(selectedDateStr))
                 .sorted((r1, r2) -> r1.getReservationTime().compareTo(r2.getReservationTime()))
