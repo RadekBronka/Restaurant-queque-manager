@@ -28,6 +28,7 @@ public class MyController {
     public String reservationdetails(Model model) {
         return "reservationdetails";
     }
+
     @PostMapping("/submitReservation")
     public String submitReservation(
             @RequestParam String firstName,
@@ -37,7 +38,8 @@ public class MyController {
             @RequestParam String time,
             @RequestParam String status,
             @RequestParam String rodzaj,
-            @RequestParam(required = false) Integer groupSize) {
+            @RequestParam(required = false) Integer groupSize,
+            Model model) {
 
         Reservation reservation = new Reservation();
         reservation.setCustomerId(idCounter.getAndIncrement());
@@ -58,11 +60,11 @@ public class MyController {
 
         reservation.setReservationTime(time);
         reservation.setReservationDate(date);
-
+        model.addAttribute("reservation",reservation);
         reservationService.addReservation(reservation);
         System.out.println(reservation);
 
-        return "redirect:/reserve?success=true";
+        return "/reservationdetails";
     }
     @PostMapping("/find")
     public String find(@RequestParam int ReservationNumber,Model model) {
