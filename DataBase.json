@@ -34,4 +34,16 @@
   "reservationTime" : "12:37",
   "reservationDate" : "2025-03-30",
   "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerNumber" : 946799,
+  "reservationType" : "Samotna",
+  "customerCount" : 1,
+  "customerName" : "Kacper",
+  "customerSurname" : "Pabian",
+  "customerEmail" : "kipek2004@gmail.com",
+  "reservationRank" : "student",
+  "reservationTime" : "11:54",
+  "reservationDate" : "2025-03-30",
+  "reservationStatus" : 0
 } ]

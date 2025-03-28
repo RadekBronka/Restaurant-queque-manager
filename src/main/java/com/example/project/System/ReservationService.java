@@ -42,6 +42,12 @@ public class ReservationService {
         reservations.add(reservation);
         saveReservations();
     }
+    public Reservation findReservationByNumber(int reservationNumber) {
+        return reservations.stream()
+                .filter(reservation -> reservation.getCustomerNumber() == reservationNumber)
+                .findFirst()
+                .orElse(null);
+    }
 
     public List<Reservation> getReservations() {
         return reservations;

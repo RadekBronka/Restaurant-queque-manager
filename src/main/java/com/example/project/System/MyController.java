@@ -24,7 +24,10 @@ public class MyController {
     public String reserve(Model model) {
         return "reserve";
     }
-
+    @GetMapping("/reservationdetails")
+    public String reservationdetails(Model model) {
+        return "reservationdetails";
+    }
     @PostMapping("/submitReservation")
     public String submitReservation(
             @RequestParam String firstName,
@@ -60,6 +63,18 @@ public class MyController {
         System.out.println(reservation);
 
         return "redirect:/reserve?success=true";
+    }
+    @PostMapping("/find")
+    public String find(@RequestParam int ReservationNumber,Model model) {
+        Reservation foundReservation = reservationService.findReservationByNumber(ReservationNumber);
+        if (foundReservation != null) {
+            model.addAttribute("reservation",foundReservation);
+            return "/reservationdetails";
+        }
+        else {
+            return "redirect:/reserve?notfound=true";
+        }
+
     }
 }
 
