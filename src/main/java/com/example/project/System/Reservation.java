@@ -42,6 +42,28 @@ public class Reservation {
 
     public Reservation() {}
 
+    public Reservation(int customerId, int customerNumber, String reservationType, int customerCount,
+                       String customerName, String customerSurname, String customerEmail, String reservationRank,
+                       String reservationTime, String reservationDate, byte reservationStatus) {
+        this.customerId = customerId;
+        this.customerNumber = customerNumber;
+        this.reservationType = reservationType;
+        this.customerCount = customerCount;
+        this.customerName = customerName;
+        this.customerSurname = customerSurname;
+        this.customerEmail = customerEmail;
+        this.reservationRank = reservationRank;
+        this.reservationTime = reservationTime;
+        this.reservationDate = reservationDate;
+        this.reservationStatus = reservationStatus;
+    }
+
+    // Nadpisanie toString(), aby ComboBox wyświetlał czytelne informacje
+    @Override
+    public String toString() {
+        return reservationTime + " - " + customerName + " " + customerSurname;
+    }
+
     public int getCustomerId() {
         return customerId;
     }
