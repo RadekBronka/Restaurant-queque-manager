@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Controller
@@ -41,11 +42,14 @@ public class MyController {
         reservation.setCustomerSurname(lastName);
         reservation.setCustomerEmail(email);
         reservation.changeStatus((byte) 0);
+        reservation.setReservationRank(status);
+        int randomNumber = ThreadLocalRandom.current().nextInt(100000, 1000000);
+        reservation.setCustomerNumber(randomNumber);
 
         if ("Grupowa".equals(rodzaj) && groupSize != null) {
             reservation.setCustomerCount(groupSize);
         } else {
-            reservation.setCustomerCount(1); // Dla rezerwacji samotnej domyślnie 1 osoba
+            reservation.setCustomerCount(1);
         }
 
         String dateTime = date + "T" + time + ":00";

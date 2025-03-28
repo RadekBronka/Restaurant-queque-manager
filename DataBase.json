@@ -1,55 +1,23 @@
 [ {
   "customerId" : 1,
   "customerCount" : 2,
-  "customerNumber" : 123456789,
-  "customerName" : "Jan",
-  "customerSurname" : "Kowalski",
-  "customerEmail" : "jan.kowalski@example.com",
-  "reservationStatus" : 1,
-  "reservationTime" : null
-}, {
-  "customerId" : 1,
-  "customerCount" : 2,
-  "customerNumber" : 11,
-  "customerName" : "LujiHQ",
-  "customerSurname" : "sdsd",
-  "customerEmail" : "kacper.pabian@pg1.brzesko.pl",
-  "reservationStatus" : 0,
-  "reservationTime" : null
-}, {
-  "customerId" : 2,
-  "customerCount" : 1,
-  "customerNumber" : 21,
-  "customerName" : "LujiHQ",
-  "customerSurname" : "sdsd",
-  "customerEmail" : "kacper.pabian@pg1.brzesko.pl",
-  "reservationStatus" : 0,
-  "reservationTime" : null
-}, {
-  "customerId" : 1,
-  "customerCount" : 2,
-  "customerNumber" : 19,
-  "customerName" : "Kacper",
-  "customerSurname" : "Pabian",
-  "customerEmail" : "kacperpabian@student.agh.edu.pl",
-  "reservationStatus" : 0,
-  "reservationTime" : null
-}, {
-  "customerId" : 1,
-  "customerCount" : 2,
-  "customerNumber" : 11,
-  "customerName" : "adsf",
-  "customerSurname" : "adsfsad",
-  "customerEmail" : "lui3pytoficial@gmail.com",
-  "reservationStatus" : 0,
-  "reservationTime" : null
-}, {
-  "customerId" : 1,
-  "customerCount" : 2,
-  "customerNumber" : 0,
+  "customerNumber" : 457036,
   "customerName" : "Kacper",
   "customerSurname" : "Pabian",
   "customerEmail" : "kipek2004@gmail.com",
+  "reservationRank" : "vip",
   "reservationStatus" : 0,
-  "reservationTime" : "2025-03-29T12:10:00"
+  "reservationTime" : "18:31",
+  "reservationDate" : "2025-03-29"
+}, {
+  "customerId" : 1,
+  "customerCount" : 2,
+  "customerNumber" : 479519,
+  "customerName" : "Kacper",
+  "customerSurname" : "Pabian",
+  "customerEmail" : "kipek2004@gmail.com",
+  "reservationRank" : "vip",
+  "reservationStatus" : 0,
+  "reservationTime" : "18:31",
+  "reservationDate" : "2025-03-29"
 } ]

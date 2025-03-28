@@ -25,19 +25,19 @@ public class Reservation {
     @JsonProperty("customerEmail")
     private String customerEmail;
 
+    @JsonProperty("reservationRank")
+    private String reservationRank;
     @JsonProperty("reservationStatus")
     private byte reservationStatus;
-    // 0 - oczekująca
-    // 1 - zatwierdzona
-    // 2 - anulowana
+
     @JsonProperty("reservationTime")
     private String reservationTime;
+
     @JsonProperty("reservationDate")
     private String reservationDate;
-    // Domyślny konstruktor wymagany przez Jacksona
+
     public Reservation() {}
 
-    // Gettery i settery muszą być PUBLICZNE!
     public int getCustomerId() {
         return customerId;
     }
@@ -115,5 +115,11 @@ public class Reservation {
     }
     public String getReservationDate() {
         return this.reservationDate;
+    }
+    public void setReservationRank(String reservationRank) {
+        this.reservationRank = reservationRank;
+    }
+    public String getReservationRank() {
+        return this.reservationRank;
     }
 }
