@@ -118,4 +118,28 @@
   "reservationTime" : "13:17",
   "reservationDate" : "2025-03-29",
   "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerNumber" : 242469,
+  "reservationType" : "Grupowa",
+  "customerCount" : 2,
+  "customerName" : "Marina",
+  "customerSurname" : "Pazdzion",
+  "customerEmail" : "lui3pytoficial@gmail.com",
+  "reservationRank" : "vip",
+  "reservationTime" : "15:21",
+  "reservationDate" : "2025-03-30",
+  "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerNumber" : 721093,
+  "reservationType" : "Grupowa",
+  "customerCount" : 2,
+  "customerName" : "Marina",
+  "customerSurname" : "Pazdzion",
+  "customerEmail" : "lui3pytoficial@gmail.com",
+  "reservationRank" : "vip",
+  "reservationTime" : "15:21",
+  "reservationDate" : "2025-03-30",
+  "reservationStatus" : 0
 } ]
