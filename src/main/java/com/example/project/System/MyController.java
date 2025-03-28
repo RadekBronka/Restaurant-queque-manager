@@ -43,6 +43,7 @@ public class MyController {
         reservation.setCustomerEmail(email);
         reservation.changeStatus((byte) 0);
         reservation.setReservationRank(status);
+        reservation.setReservationType(rodzaj);
         int randomNumber = ThreadLocalRandom.current().nextInt(100000, 1000000);
         reservation.setCustomerNumber(randomNumber);
 
@@ -52,7 +53,6 @@ public class MyController {
             reservation.setCustomerCount(1);
         }
 
-        String dateTime = date + "T" + time + ":00";
         reservation.setReservationTime(time);
         reservation.setReservationDate(date);
 

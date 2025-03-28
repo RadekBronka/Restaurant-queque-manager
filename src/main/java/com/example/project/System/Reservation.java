@@ -9,12 +9,14 @@ public class Reservation {
 
     @JsonProperty("customerId")
     private int customerId;
+    @JsonProperty("customerNumber")
+    private int customerNumber;
+
+    @JsonProperty("reservationType")
+    private String reservationType;
 
     @JsonProperty("customerCount")
     private int customerCount;
-
-    @JsonProperty("customerNumber")
-    private int customerNumber;
 
     @JsonProperty("customerName")
     private String customerName;
@@ -27,14 +29,16 @@ public class Reservation {
 
     @JsonProperty("reservationRank")
     private String reservationRank;
-    @JsonProperty("reservationStatus")
-    private byte reservationStatus;
 
     @JsonProperty("reservationTime")
     private String reservationTime;
 
     @JsonProperty("reservationDate")
     private String reservationDate;
+
+    @JsonProperty("reservationStatus")
+    private byte reservationStatus;
+
 
     public Reservation() {}
 
@@ -121,5 +125,12 @@ public class Reservation {
     }
     public String getReservationRank() {
         return this.reservationRank;
+    }
+
+    public void setReservationType(String reservationType) {
+        this.reservationType = reservationType;
+    }
+    public String getReservationType() {
+        return this.reservationType;
     }
 }
