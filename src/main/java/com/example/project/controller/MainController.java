@@ -41,6 +41,7 @@ public class MainController {
 
     @FXML
     public void onDatePicker(ActionEvent event) {
+        loadReservationsFromJson();
         LocalDate selectedDate = datePicker.getValue();
         if (selectedDate == null) return;
 

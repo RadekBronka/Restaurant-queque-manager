@@ -250,4 +250,28 @@
   "reservationTime" : "14:30",
   "reservationDate" : "2025-03-29",
   "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerNumber" : 258015,
+  "reservationType" : "Samotna",
+  "customerCount" : 1,
+  "customerName" : "test",
+  "customerSurname" : "test",
+  "customerEmail" : "test@gmail.com",
+  "reservationRank" : "student",
+  "reservationTime" : "14:44",
+  "reservationDate" : "2025-03-30",
+  "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerNumber" : 377424,
+  "reservationType" : "Samotna",
+  "customerCount" : 1,
+  "customerName" : "test2",
+  "customerSurname" : "test",
+  "customerEmail" : "test@gmail.com",
+  "reservationRank" : "student",
+  "reservationTime" : "14:47",
+  "reservationDate" : "2025-03-30",
+  "reservationStatus" : 0
 } ]
