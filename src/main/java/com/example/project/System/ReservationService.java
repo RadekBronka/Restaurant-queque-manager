@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ReservationService {
     private static final String FILE_PATH = "src/main/resources/DataBase.json";
@@ -48,6 +49,25 @@ public class ReservationService {
                 .findFirst()
                 .orElse(null);
     }
+    public List<Reservation> findReservationsByDateAndHour(String date, int hour) {
+        return reservations.stream()
+                .filter(reservation -> reservation.getReservationDate() != null && reservation.getReservationDate().equals(date))
+                .filter(reservation -> {
+                    if (reservation.getReservationTime() == null) return false;
+                    String[] timeParts = reservation.getReservationTime().split(":");
+                    int reservationHour = Integer.parseInt(timeParts[0]);
+                    return reservationHour == hour;
+                })
+                .collect(Collectors.toList());
+    }
+
+
+    public boolean emptyTable(String date, int hour) {
+        return findReservationsByDateAndHour(date, hour).size() < 5;
+    }
+
+
+
 
     public List<Reservation> getReservations() {
         return reservations;

@@ -41,6 +41,15 @@ public class MyController {
             @RequestParam(required = false) Integer groupSize,
             Model model) {
 
+        // Pobranie godziny z czasu "HH:mm"
+        int hour = Integer.parseInt(time.split(":")[0]);
+
+        // Sprawdzenie dostępności stolika
+        if (!reservationService.emptyTable(date, hour)) {
+            return "redirect:/?full=true"; // Jeśli brak miejsca, przekierowanie do formularza z parametrem
+        }
+
+        // Tworzenie nowej rezerwacji
         Reservation reservation = new Reservation();
         reservation.setCustomerId(idCounter.getAndIncrement());
         reservation.setCustomerName(firstName);
@@ -60,12 +69,12 @@ public class MyController {
 
         reservation.setReservationTime(time);
         reservation.setReservationDate(date);
-        model.addAttribute("reservation",reservation);
+        model.addAttribute("reservation", reservation);
         reservationService.addReservation(reservation);
-        System.out.println(reservation);
 
         return "/reservationdetails";
     }
+
     @PostMapping("/find")
     public String find(@RequestParam int ReservationNumber,Model model) {
         Reservation foundReservation = reservationService.findReservationByNumber(ReservationNumber);
