@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -49,7 +50,7 @@ public class ReservationService {
                 .findFirst()
                 .orElse(null);
     }
-    public List<Reservation> findReservationsByDateAndHour(String date, int hour) {
+    public List<Reservation> findReservationsByDateAndHour(String date, int hour,int customerCount) {
         return reservations.stream()
                 .filter(reservation -> reservation.getReservationDate() != null && reservation.getReservationDate().equals(date))
                 .filter(reservation -> {
@@ -58,12 +59,18 @@ public class ReservationService {
                     int reservationHour = Integer.parseInt(timeParts[0]);
                     return reservationHour == hour;
                 })
+                .filter(reservation -> reservation.getCustomerCount() == customerCount)
+                .collect(Collectors.toList());
+    }
+    public List<Reservation> findReservationsBycustomerCount(int customerCount) {
+        return reservations.stream()
+                .filter(reservation -> reservation.getCustomerCount() == customerCount)
                 .collect(Collectors.toList());
     }
 
 
-    public boolean emptyTable(String date, int hour) {
-        return findReservationsByDateAndHour(date, hour).size() < 5;
+    public boolean emptyTable(String date, int hour, int customerCount) {
+        return findReservationsByDateAndHour(date, hour,customerCount).size() < 1;
     }
 
 

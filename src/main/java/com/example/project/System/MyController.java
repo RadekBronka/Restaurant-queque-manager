@@ -41,13 +41,6 @@ public class MyController {
             @RequestParam(required = false) Integer groupSize,
             Model model) {
 
-        // Pobranie godziny z czasu "HH:mm"
-        int hour = Integer.parseInt(time.split(":")[0]);
-
-        // Sprawdzenie dostępności stolika
-        if (!reservationService.emptyTable(date, hour)) {
-            return "redirect:/?full=true"; // Jeśli brak miejsca, przekierowanie do formularza z parametrem
-        }
 
         // Tworzenie nowej rezerwacji
         Reservation reservation = new Reservation();
@@ -69,6 +62,13 @@ public class MyController {
 
         reservation.setReservationTime(time);
         reservation.setReservationDate(date);
+        // Pobranie godziny z czasu "HH:mm"
+        int hour = Integer.parseInt(time.split(":")[0]);
+
+        // Sprawdzenie dostępności stolika
+        if (!reservationService.emptyTable(date, hour,reservation.getCustomerCount())) {
+            return "redirect:/?full=true";
+        }
         model.addAttribute("reservation", reservation);
         reservationService.addReservation(reservation);
 

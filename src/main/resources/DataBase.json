@@ -346,4 +346,76 @@
   "reservationTime" : "17:23",
   "reservationDate" : "2025-03-31",
   "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerNumber" : 370346,
+  "reservationType" : "Samotna",
+  "customerCount" : 1,
+  "customerName" : "adsf",
+  "customerSurname" : "adsfsad",
+  "customerEmail" : "lui3pytoficial@gmail.com",
+  "reservationRank" : "student",
+  "reservationTime" : "17:49",
+  "reservationDate" : "2025-04-02",
+  "reservationStatus" : 0
+}, {
+  "customerId" : 2,
+  "customerNumber" : 546106,
+  "reservationType" : "Samotna",
+  "customerCount" : 1,
+  "customerName" : "Kacper",
+  "customerSurname" : "Pabian",
+  "customerEmail" : "kipek2004@gmail.com",
+  "reservationRank" : "student",
+  "reservationTime" : "17:50",
+  "reservationDate" : "2025-04-02",
+  "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerNumber" : 296321,
+  "reservationType" : "Samotna",
+  "customerCount" : 1,
+  "customerName" : "adsf",
+  "customerSurname" : "adsfsad",
+  "customerEmail" : "lui3pytoficial@gmail.com",
+  "reservationRank" : "gosc",
+  "reservationTime" : "17:51",
+  "reservationDate" : "2025-04-02",
+  "reservationStatus" : 0
+}, {
+  "customerId" : 2,
+  "customerNumber" : 527807,
+  "reservationType" : "Samotna",
+  "customerCount" : 1,
+  "customerName" : "adsf",
+  "customerSurname" : "adsfsad",
+  "customerEmail" : "lui3pytoficial@gmail.com",
+  "reservationRank" : "student",
+  "reservationTime" : "14:55",
+  "reservationDate" : "2025-04-06",
+  "reservationStatus" : 0
+}, {
+  "customerId" : 1,
+  "customerNumber" : 104766,
+  "reservationType" : "Grupowa",
+  "customerCount" : 2,
+  "customerName" : "adsf",
+  "customerSurname" : "adsfsad",
+  "customerEmail" : "lui3pytoficial@gmail.com",
+  "reservationRank" : "student",
+  "reservationTime" : "17:55",
+  "reservationDate" : "2025-04-02",
+  "reservationStatus" : 0
+}, {
+  "customerId" : 3,
+  "customerNumber" : 251193,
+  "reservationType" : "Grupowa",
+  "customerCount" : 4,
+  "customerName" : "adsf",
+  "customerSurname" : "adsfsad",
+  "customerEmail" : "lui3pytoficial@gmail.com",
+  "reservationRank" : "pracownik",
+  "reservationTime" : "17:55",
+  "reservationDate" : "2025-04-02",
+  "reservationStatus" : 0
 } ]
