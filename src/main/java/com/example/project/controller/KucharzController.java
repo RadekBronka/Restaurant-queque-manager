@@ -19,14 +19,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class KucharzController {
-    WindowUtility windowUtility = new WindowUtility();
+public class KucharzController extends WindowUtility{
+
     @FXML
     private Button exitButton;
 
     public void onWydajButton(ActionEvent actionEvent) {
     }
     public void onExitButton(ActionEvent actionEvent) {
-        windowUtility.closeWindow(actionEvent);
+        closeWindow(actionEvent);
     }
 }

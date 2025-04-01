@@ -20,9 +20,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class KelnerController {
-
-    WindowUtility windowUtility = new WindowUtility();
+public class KelnerController extends WindowUtility {
 
     @FXML
     private Label welcomeLabel;
@@ -92,6 +90,6 @@ public class KelnerController {
     }
 
     public void onExitButton(ActionEvent actionEvent) {
-        windowUtility.closeWindow(actionEvent);
+        closeWindow(actionEvent);
     }
 }

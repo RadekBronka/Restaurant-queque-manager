@@ -10,15 +10,15 @@ import org.springframework.stereotype.Controller;
 import java.io.IOException;
 
 @Controller
-public class MainPageController {
-    WindowUtility windowUtility = new WindowUtility();
+public class MainPageController extends WindowUtility {
+
 
     public void onKelnerButton(ActionEvent actionEvent) {
-        windowUtility.openNewWindow("/templates/kelner.fxml", "Kelner");
+        openNewWindow("/templates/kelner.fxml", "Kelner");
     }
 
     public void onKucharzButton(ActionEvent actionEvent) {
-        windowUtility.openNewWindow("/templates/kucharz.fxml", "Kucharz");
+        openNewWindow("/templates/kucharz.fxml", "Kucharz");
     }
 
 }
