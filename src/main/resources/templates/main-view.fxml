@@ -6,14 +6,21 @@
 <VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.controller.MainController">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="624.0">
-         <top>
-            <AnchorPane prefHeight="182.0" prefWidth="624.0" BorderPane.alignment="CENTER">
+         <center>
+            <AnchorPane prefHeight="426.0" prefWidth="624.0" BorderPane.alignment="CENTER">
                <children>
-                  <DatePicker fx:id="datePicker" layoutX="320.0" layoutY="54.0" onAction="#onDatePicker" />
-                  <ComboBox fx:id="reservationBox" layoutX="49.0" layoutY="54.0" prefHeight="25.0" prefWidth="179.0" />
+                  <DatePicker fx:id="datePicker" layoutX="42.0" layoutY="40.0" onAction="#onDatePicker" />
+                  <ComboBox fx:id="reservationBox" layoutX="239.0" layoutY="40.0" prefHeight="25.0" prefWidth="179.0" />
+                  <Button fx:id="anulujButton" layoutX="455.0" layoutY="40.0" mnemonicParsing="false" onAction="#onAnulujButton" text="Anuluj rezerwacje" />
+                  <Label layoutX="74.0" layoutY="109.0" text="Dodaj zamówienie" />
+                  <ComboBox fx:id="daniaBox" layoutX="42.0" layoutY="147.0" onAction="#onDaniaBox" prefHeight="25.0" prefWidth="179.0" />
+                  <TextField fx:id="numerStolika" layoutX="166.0" layoutY="188.0" prefHeight="25.0" prefWidth="42.0" />
+                  <Label layoutX="48.0" layoutY="192.0" prefHeight="17.0" prefWidth="100.0" text="Numer stolika" />
+                  <CheckBox fx:id="klientVip" layoutX="48.0" layoutY="227.0" mnemonicParsing="false" onAction="#onKlientVip" text="Klient VIP" />
+                  <Button fx:id="zatwierdzButton" layoutX="98.0" layoutY="265.0" mnemonicParsing="false" onAction="#onZatwierdzButton" text="Zatwierdź" />
                </children>
             </AnchorPane>
-         </top>
+         </center>
       </BorderPane>
    </children>
 </VBox>

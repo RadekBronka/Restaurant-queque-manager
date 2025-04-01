@@ -73,4 +73,16 @@ public class MainController {
             e.printStackTrace();
         }
     }
+
+    public void onAnulujButton(ActionEvent actionEvent) {
+    }
+
+    public void onDaniaBox(ActionEvent actionEvent) {
+    }
+
+    public void onKlientVip(ActionEvent actionEvent) {
+    }
+
+    public void onZatwierdzButton(ActionEvent actionEvent) {
+    }
 }
