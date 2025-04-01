@@ -7,5 +7,6 @@
    <children>
       <Pane layoutY="14.0" prefHeight="376.0" prefWidth="200.0" />
       <Button fx:id="wydajButton" layoutX="235.0" layoutY="23.0" mnemonicParsing="false" onAction="#onWydajButton" text="Wydaj" />
+      <Button fx:id="exitButton" layoutX="562.0" layoutY="11.0" mnemonicParsing="false" onAction="#onExitButton" text="X" />
    </children>
 </AnchorPane>

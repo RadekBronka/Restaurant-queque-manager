@@ -5,8 +5,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 import org.springframework.stereotype.Component;
 import javafx.scene.control.DatePicker;
 import com.example.project.System.Reservation;
@@ -18,13 +20,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class MainController {
+public class KelnerController {
+
+    WindowUtility windowUtility = new WindowUtility();
 
     @FXML
     private Label welcomeLabel;
     @FXML
     private DatePicker datePicker;
-
+    @FXML
+    private Button exitButton;
     @FXML
     private ComboBox<Reservation> reservationBox; // ComboBox przechowuje obiekty Reservation
 
@@ -84,5 +89,9 @@ public class MainController {
     }
 
     public void onZatwierdzButton(ActionEvent actionEvent) {
+    }
+
+    public void onExitButton(ActionEvent actionEvent) {
+        windowUtility.closeWindow(actionEvent);
     }
 }
