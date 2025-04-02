@@ -19,6 +19,8 @@
                   <CheckBox fx:id="klientVip" layoutX="48.0" layoutY="227.0" mnemonicParsing="false" onAction="#onKlientVip" text="Klient VIP" />
                   <Button fx:id="zatwierdzButton" layoutX="98.0" layoutY="265.0" mnemonicParsing="false" onAction="#onZatwierdzButton" text="Zatwierdź" />
                   <Button fx:id="exitButton" layoutX="586.0" layoutY="14.0" mnemonicParsing="false" onAction="#onExitButton" text="X" />
+                  <Label layoutX="28.0" layoutY="18.0" text="Witaj" />
+                  <Label fx:id="imieLabel" layoutX="74.0" layoutY="18.0" text="Label" />
                </children>
             </AnchorPane>
          </center>

@@ -7,6 +7,7 @@ import com.example.project.Pracownicy.Waiter;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -33,6 +34,8 @@ public class KelnerController extends WindowUtility {
     private ComboBox<Reservation> reservationBox; // ComboBox przechowuje obiekty Reservation
     @FXML
     private CheckBox klientVip;
+    @FXML
+    private Label imieLabel;
     @FXML
     private ComboBox<Food> daniaBox;
     private List<Reservation> reservations = new ArrayList<>();
@@ -86,6 +89,7 @@ public class KelnerController extends WindowUtility {
     }
     public void setEmployee(Waiter waiter) {
         this.waiter = waiter;
+        imieLabel.setText(waiter.getName());
     }
 
     public void onAnulujButton(ActionEvent actionEvent) {
