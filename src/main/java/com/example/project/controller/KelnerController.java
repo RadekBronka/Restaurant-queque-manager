@@ -3,6 +3,7 @@ package com.example.project.controller;
 import com.example.project.Jedzenie.Dish;
 import com.example.project.Jedzenie.Drink;
 import com.example.project.Jedzenie.Food;
+import com.example.project.Pracownicy.Waiter;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
@@ -30,12 +31,15 @@ public class KelnerController extends WindowUtility {
     private Button exitButton;
     @FXML
     private ComboBox<Reservation> reservationBox; // ComboBox przechowuje obiekty Reservation
+    @FXML
     private CheckBox klientVip;
     @FXML
     private ComboBox<Food> daniaBox;
-
     private List<Reservation> reservations = new ArrayList<>();
     private List<Food> food = new ArrayList<>();
+
+    Waiter waiter = new Waiter();
+
     @FXML
     public void initialize() {
         //Utworzenie kilku obiektów klas dziedziczących po Food i umieszczenie ich w liście
@@ -82,6 +86,7 @@ public class KelnerController extends WindowUtility {
     }
 
     public void onAnulujButton(ActionEvent actionEvent) {
+        //waiter.cancelReservation();
     }
 
     public void onDaniaBox(ActionEvent actionEvent) {
