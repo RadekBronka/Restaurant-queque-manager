@@ -12,8 +12,10 @@ import javafx.stage.Stage;
 import org.springframework.stereotype.Controller;
 import javafx.scene.control.TextField;
 
-import java.awt.*;
+import java.util.List;
+import java.util.ArrayList;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,11 +27,20 @@ public class MainPageController extends WindowUtility {
     private TextField idTextField;
 
     //symulowana baza danych z pracownikami
-    private static final Map<Integer, Employee> employees = new HashMap<>();
+    private static final List<Employee> employees = new ArrayList<>();
 
     static {
-        employees.put(1, new Waiter(1, "Jan", 3000, "jan123"));
-        employees.put(2, new Cook(2, "Krzysztof", 4000, "krzysztof123"));
+        employees.add(new Waiter(1, "Jan", 3000, "jan123"));
+        employees.add(new Cook(2, "Krzysztof", 4000, "krzysztof123"));
+    }
+
+    private Employee findEmployeeById(int id) {
+        for (Employee e : employees) {
+            if (e.getId() == id) {
+                return e;
+            }
+        }
+        return null; // Zwracamy null, jeśli nie znaleziono pracownika
     }
 
     public void onKelnerButton(ActionEvent actionEvent) {
@@ -45,9 +56,9 @@ public class MainPageController extends WindowUtility {
         try {
             int id = Integer.parseInt(idTextField.getText());
             String password = hasloTextField.getText();
+            Employee employee = findEmployeeById(id);  // Znajdź pracownika na podstawie ID
 
-            Employee employee = employees.get(id);
-
+            // Jeśli pracownik istnieje i hasło się zgadza
             if (employee != null && employee.getPassword().equals(password)) {
                 if (employee instanceof Waiter) {
                     openNewWindowWithData("/templates/kelner.fxml", "Kelner", employee);
