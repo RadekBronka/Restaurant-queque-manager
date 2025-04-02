@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 @Component
 public class KelnerController extends WindowUtility {
-
+    private Waiter waiter;
     @FXML
     private Label welcomeLabel;
     @FXML
@@ -38,7 +38,7 @@ public class KelnerController extends WindowUtility {
     private List<Reservation> reservations = new ArrayList<>();
     private List<Food> food = new ArrayList<>();
 
-    Waiter waiter = new Waiter();
+
 
     @FXML
     public void initialize() {
@@ -83,6 +83,9 @@ public class KelnerController extends WindowUtility {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public void setEmployee(Waiter waiter) {
+        this.waiter = waiter;
     }
 
     public void onAnulujButton(ActionEvent actionEvent) {

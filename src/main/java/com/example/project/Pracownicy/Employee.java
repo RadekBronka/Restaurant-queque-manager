@@ -2,11 +2,17 @@ package com.example.project.Pracownicy;
 
 public class Employee {
     private int id;
+    private String password;
     private String name;
     private int salary;
     public Employee() {}
 
-    public Employee(int id, String name, int salary, int napiwek) {}
+    public Employee(int id, String name, int salary, String password) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+        this.password = password;
+    }
 
     public Employee(int id, String name, int salary) {
         this.id = id;
@@ -31,6 +37,9 @@ public class Employee {
     }
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+    public String getPassword() {
+        return password;
     }
 
 

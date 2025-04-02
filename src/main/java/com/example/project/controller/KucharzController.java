@@ -1,7 +1,9 @@
 package com.example.project.controller;
 
+import com.example.project.Pracownicy.Cook;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.javafx.charts.Legend;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +22,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class KucharzController extends WindowUtility{
+    private Cook cook;
 
     @FXML
     private Button exitButton;
@@ -28,5 +31,9 @@ public class KucharzController extends WindowUtility{
     }
     public void onExitButton(ActionEvent actionEvent) {
         closeWindow(actionEvent);
+    }
+    
+    public void setEmployee(Cook cook) {
+        this.cook = cook;
     }
 }
