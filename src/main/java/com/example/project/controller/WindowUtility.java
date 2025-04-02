@@ -10,9 +10,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class WindowUtility {
+
+
     //zamykanie okna
     void closeWindow(ActionEvent event) {
-
         ((Stage) ((Node) event.getSource()).getScene().getWindow()).close();
     }
     //otwierania nowego okna

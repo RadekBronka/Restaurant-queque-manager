@@ -7,8 +7,8 @@ public class Dish extends Food {
     public Dish(boolean spicy) {
         this.spicy = spicy;
     }
-    public Dish(boolean spicy, int cost, boolean vegetarian, boolean kidsMenu){
-        super(cost, vegetarian, kidsMenu);
+    public Dish(boolean spicy, String name, int cost, boolean vegetarian, boolean kidsMenu){
+        super(name, cost, vegetarian, kidsMenu);
         this.spicy = spicy;
     }
     public boolean isSpicy() {

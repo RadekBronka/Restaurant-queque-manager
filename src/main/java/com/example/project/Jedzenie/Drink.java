@@ -6,11 +6,11 @@ public class Drink extends Food{
     public Drink(){}
 
     public Drink(int volume){
-        super(10, false, false);
+        super("Picie", 10, false, false);
         this.volume = volume;
     }
-    public Drink(int volume, int cost, boolean vegetarian, boolean kidsMenu){
-        super(cost, vegetarian, kidsMenu);
+    public Drink(int volume,String name, int cost, boolean vegetarian, boolean kidsMenu){
+        super(name, cost, vegetarian, kidsMenu);
         this.volume = volume;
     }
 }

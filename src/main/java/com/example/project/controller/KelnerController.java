@@ -1,6 +1,8 @@
 package com.example.project.controller;
 
 import com.example.project.Jedzenie.Dish;
+import com.example.project.Jedzenie.Drink;
+import com.example.project.Jedzenie.Food;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
@@ -29,13 +31,19 @@ public class KelnerController extends WindowUtility {
     @FXML
     private ComboBox<Reservation> reservationBox; // ComboBox przechowuje obiekty Reservation
     private CheckBox klientVip;
-    private ComboBox<Dish> daniaBox;
+    @FXML
+    private ComboBox<Food> daniaBox;
 
     private List<Reservation> reservations = new ArrayList<>();
-
+    private List<Food> food = new ArrayList<>();
     @FXML
     public void initialize() {
-        loadReservationsFromJson();
+        //Utworzenie kilku obiektów klas dziedziczących po Food i umieszczenie ich w liście
+        food.add(new Drink(330,"CocaCola",7,true,false));
+        food.add(new Drink(500,"SokPomaranczowy",6,true,true));
+        food.add(new Dish(false,"Pierogi",20,false,false));
+        //wyswietlanie w comboBox
+        daniaBox.setItems(FXCollections.observableArrayList(food));
     }
 
     @FXML
