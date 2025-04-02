@@ -2,23 +2,26 @@ package com.example.project.Pracownicy;
 
 import com.example.project.System.Reservation;
 
-public class Kelner extends Pracownik implements cancelReservation {
-    private int napiwek;
+public class Waiter extends Employee implements cancelReservation, takeOrder {
+    private int tip;
 
-    public Kelner() {
+    public Waiter() {
         super(0, "Jan", 1500 );
     }
 
-    public Kelner(int napiwek) {
+    public Waiter(int tip) {
         super(0, "Jan", 1500 );
-        this.napiwek = napiwek;
+        this.tip = tip;
     }
-    public Kelner(int id, String imie, int pensja, int napiwek){
+    public Waiter(int id, String imie, int pensja, int napiwek){
         super(id,imie,pensja,napiwek);
     }
 
     public void cancelReservation(Reservation reservation, byte status) {
         reservation.changeStatus(status);
     }
+
+    public void cancel(){}
+    public void takeOrder(){}
 
 }

@@ -1,16 +1,14 @@
 package com.example.project.controller;
 
+import com.example.project.Jedzenie.Dish;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.springframework.stereotype.Component;
-import javafx.scene.control.DatePicker;
 import com.example.project.System.Reservation;
 
 import java.io.InputStream;
@@ -30,16 +28,14 @@ public class KelnerController extends WindowUtility {
     private Button exitButton;
     @FXML
     private ComboBox<Reservation> reservationBox; // ComboBox przechowuje obiekty Reservation
+    private CheckBox klientVip;
+    private ComboBox<Dish> daniaBox;
 
     private List<Reservation> reservations = new ArrayList<>();
 
     @FXML
     public void initialize() {
         loadReservationsFromJson();
-    }
-
-    public void handleClick() {
-        welcomeLabel.setText("Kliknięcie działa — Spring Boot + JavaFX razem 🎉");
     }
 
     @FXML
