@@ -37,14 +37,14 @@ public class Reservation {
     private String reservationDate;
 
     @JsonProperty("reservationStatus")
-    private byte reservationStatus;
+    private boolean reservationStatus;
 
 
     public Reservation() {}
 
     public Reservation(int customerId, int customerNumber, String reservationType, int customerCount,
                        String customerName, String customerSurname, String customerEmail, String reservationRank,
-                       String reservationTime, String reservationDate, byte reservationStatus) {
+                       String reservationTime, String reservationDate, boolean reservationStatus) {
         this.customerId = customerId;
         this.customerNumber = customerNumber;
         this.reservationType = reservationType;
@@ -112,22 +112,22 @@ public class Reservation {
         this.customerEmail = customerEmail;
     }
 
-    public byte getReservationStatus() {
+    public boolean getReservationStatus() {
         return reservationStatus;
     }
 
-    public void setReservationStatus(byte reservationStatus) {
+    public void setReservationStatus(boolean reservationStatus) {
         this.reservationStatus = reservationStatus;
     }
 
     // Zmiana statusu rezerwacji
-    public void changeStatus(byte nowyStatus) {
+    public void changeStatus(boolean nowyStatus) {
         this.reservationStatus = nowyStatus;
     }
 
     // Sprawdzenie, czy rezerwacja ma status "zatwierdzona"
     public boolean isActive() {
-        return this.reservationStatus == 1;
+        return this.reservationStatus == true;
     }
     public void setReservationTime(String reservationTime) {
         this.reservationTime = reservationTime;

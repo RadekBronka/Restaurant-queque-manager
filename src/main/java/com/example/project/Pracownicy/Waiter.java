@@ -21,7 +21,7 @@ public class Waiter extends Employee implements cancelReservation, takeOrder {
         this.tip = tip;
     }
 
-    public void cancelReservation(Reservation reservation, byte status) {
+    public void cancelReservation(Reservation reservation,boolean status) {
         reservation.changeStatus(status);
     }
 

@@ -9,7 +9,7 @@
   "reservationRank" : "vip",
   "reservationTime" : "18:31",
   "reservationDate" : "2025-03-29",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 479519,
@@ -21,7 +21,7 @@
   "reservationRank" : "vip",
   "reservationTime" : "18:31",
   "reservationDate" : "2025-03-29",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 986884,
@@ -33,7 +33,7 @@
   "reservationRank" : "vip",
   "reservationTime" : "12:37",
   "reservationDate" : "2025-03-30",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 946799,
@@ -45,7 +45,7 @@
   "reservationRank" : "student",
   "reservationTime" : "11:54",
   "reservationDate" : "2025-03-30",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 708579,
@@ -57,7 +57,7 @@
   "reservationRank" : "vip",
   "reservationTime" : "13:16",
   "reservationDate" : "2025-03-30",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 841295,
@@ -69,7 +69,7 @@
   "reservationRank" : "gosc",
   "reservationTime" : "13:17",
   "reservationDate" : "2025-03-29",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 263712,
@@ -81,7 +81,7 @@
   "reservationRank" : "gosc",
   "reservationTime" : "13:17",
   "reservationDate" : "2025-03-29",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 823888,
@@ -93,7 +93,7 @@
   "reservationRank" : "gosc",
   "reservationTime" : "13:17",
   "reservationDate" : "2025-03-29",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 2,
   "customerNumber" : 730774,
@@ -105,7 +105,7 @@
   "reservationRank" : "gosc",
   "reservationTime" : "13:17",
   "reservationDate" : "2025-03-29",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 3,
   "customerNumber" : 439604,
@@ -117,7 +117,7 @@
   "reservationRank" : "gosc",
   "reservationTime" : "13:17",
   "reservationDate" : "2025-03-29",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 242469,
@@ -129,7 +129,7 @@
   "reservationRank" : "vip",
   "reservationTime" : "15:21",
   "reservationDate" : "2025-03-30",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 721093,
@@ -141,7 +141,7 @@
   "reservationRank" : "vip",
   "reservationTime" : "15:21",
   "reservationDate" : "2025-03-30",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 19,
@@ -153,7 +153,7 @@
   "reservationRank" : null,
   "reservationTime" : null,
   "reservationDate" : null,
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 20,
@@ -165,7 +165,7 @@
   "reservationRank" : null,
   "reservationTime" : null,
   "reservationDate" : null,
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 15,
@@ -177,7 +177,7 @@
   "reservationRank" : null,
   "reservationTime" : null,
   "reservationDate" : null,
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 15,
@@ -189,7 +189,7 @@
   "reservationRank" : null,
   "reservationTime" : null,
   "reservationDate" : null,
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 15,
@@ -201,7 +201,7 @@
   "reservationRank" : null,
   "reservationTime" : null,
   "reservationDate" : null,
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 15,
@@ -213,7 +213,7 @@
   "reservationRank" : null,
   "reservationTime" : null,
   "reservationDate" : null,
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 15,
@@ -225,7 +225,7 @@
   "reservationRank" : null,
   "reservationTime" : null,
   "reservationDate" : null,
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 15,
@@ -237,7 +237,7 @@
   "reservationRank" : null,
   "reservationTime" : null,
   "reservationDate" : null,
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 389179,
@@ -249,7 +249,7 @@
   "reservationRank" : "student",
   "reservationTime" : "14:30",
   "reservationDate" : "2025-03-29",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 258015,
@@ -261,7 +261,7 @@
   "reservationRank" : "student",
   "reservationTime" : "14:44",
   "reservationDate" : "2025-03-30",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 377424,
@@ -273,7 +273,7 @@
   "reservationRank" : "student",
   "reservationTime" : "14:47",
   "reservationDate" : "2025-03-30",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 119309,
@@ -285,7 +285,7 @@
   "reservationRank" : "student",
   "reservationTime" : "10:15",
   "reservationDate" : "2025-03-31",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 2,
   "customerNumber" : 229362,
@@ -297,7 +297,7 @@
   "reservationRank" : "student",
   "reservationTime" : "10:15",
   "reservationDate" : "2025-03-31",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 199015,
@@ -309,7 +309,7 @@
   "reservationRank" : "student",
   "reservationTime" : "10:15",
   "reservationDate" : "2025-03-31",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 609617,
@@ -321,7 +321,7 @@
   "reservationRank" : "student",
   "reservationTime" : "10:15",
   "reservationDate" : "2025-03-31",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 311368,
@@ -333,7 +333,7 @@
   "reservationRank" : "student",
   "reservationTime" : "10:15",
   "reservationDate" : "2025-03-31",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 927384,
@@ -345,7 +345,7 @@
   "reservationRank" : "vip",
   "reservationTime" : "17:23",
   "reservationDate" : "2025-03-31",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 370346,
@@ -357,7 +357,7 @@
   "reservationRank" : "student",
   "reservationTime" : "17:49",
   "reservationDate" : "2025-04-02",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 2,
   "customerNumber" : 546106,
@@ -369,7 +369,7 @@
   "reservationRank" : "student",
   "reservationTime" : "17:50",
   "reservationDate" : "2025-04-02",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 296321,
@@ -381,7 +381,7 @@
   "reservationRank" : "gosc",
   "reservationTime" : "17:51",
   "reservationDate" : "2025-04-02",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 2,
   "customerNumber" : 527807,
@@ -393,7 +393,7 @@
   "reservationRank" : "student",
   "reservationTime" : "14:55",
   "reservationDate" : "2025-04-06",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 1,
   "customerNumber" : 104766,
@@ -405,7 +405,7 @@
   "reservationRank" : "student",
   "reservationTime" : "17:55",
   "reservationDate" : "2025-04-02",
-  "reservationStatus" : 0
+  "reservationStatus" : false
 }, {
   "customerId" : 3,
   "customerNumber" : 251193,
@@ -417,5 +417,29 @@
   "reservationRank" : "pracownik",
   "reservationTime" : "17:55",
   "reservationDate" : "2025-04-02",
-  "reservationStatus" : 0
+  "reservationStatus" : false
+}, {
+  "customerId" : 1,
+  "customerNumber" : 126889,
+  "reservationType" : "Samotna",
+  "customerCount" : 1,
+  "customerName" : "Kacper",
+  "customerSurname" : "Pabian",
+  "customerEmail" : "kipek2004@gmail.com",
+  "reservationRank" : "student",
+  "reservationTime" : "17:18",
+  "reservationDate" : "2025-04-30",
+  "reservationStatus" : false
+}, {
+  "customerId" : 1,
+  "customerNumber" : 304649,
+  "reservationType" : "Samotna",
+  "customerCount" : 1,
+  "customerName" : "Kacper",
+  "customerSurname" : "Pabian",
+  "customerEmail" : "kipek2004@gmail.com",
+  "reservationRank" : "student",
+  "reservationTime" : "16:21",
+  "reservationDate" : "2025-04-29",
+  "reservationStatus" : true
 } ]

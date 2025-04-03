@@ -48,7 +48,7 @@ public class MyController {
         reservation.setCustomerName(firstName);
         reservation.setCustomerSurname(lastName);
         reservation.setCustomerEmail(email);
-        reservation.changeStatus((byte) 0);
+        reservation.changeStatus(true);
         reservation.setReservationRank(status);
         reservation.setReservationType(rodzaj);
         int randomNumber = ThreadLocalRandom.current().nextInt(100000, 1000000);
