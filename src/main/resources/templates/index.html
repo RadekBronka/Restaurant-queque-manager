@@ -85,6 +85,9 @@
             </div>
         </form>
     </section>
+    <div class="text-center text-danger mt-2" th:if="${param.full}">
+        <p  style="color: red;">Brak wolnych miejsc na wybraną godzinę.</p>
+    </div>
 </main>
 
 <footer class="container-fluid bg-dark text-white text-center p-3">
