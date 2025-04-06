@@ -3,10 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.controller.KucharzController">
+<AnchorPane prefHeight="400.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.controller.KucharzController">
    <children>
-      <Pane layoutY="14.0" prefHeight="376.0" prefWidth="200.0" />
       <Button fx:id="wydajButton" layoutX="235.0" layoutY="23.0" mnemonicParsing="false" onAction="#onWydajButton" text="Wydaj" />
       <Button fx:id="exitButton" layoutX="562.0" layoutY="11.0" mnemonicParsing="false" onAction="#onExitButton" text="X" />
+      <ListView fx:id="zamowieniaList" layoutX="20.0" layoutY="23.0" prefHeight="363.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

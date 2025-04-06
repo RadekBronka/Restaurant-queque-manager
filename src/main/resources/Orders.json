@@ -1,1 +1,9 @@
-[]
+[ {
+  "name" : "CocaCola",
+  "table" : 2,
+  "vip" : true
+}, {
+  "name" : "Pierogi",
+  "table" : 2,
+  "vip" : true
+} ]

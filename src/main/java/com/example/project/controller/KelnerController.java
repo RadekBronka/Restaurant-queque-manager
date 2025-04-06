@@ -3,6 +3,7 @@ package com.example.project.controller;
 import com.example.project.Jedzenie.Dish;
 import com.example.project.Jedzenie.Drink;
 import com.example.project.Jedzenie.Food;
+import com.example.project.Jedzenie.Order;
 import com.example.project.Pracownicy.Waiter;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,9 +38,12 @@ public class KelnerController extends WindowUtility {
     @FXML
     private Label imieLabel;
     @FXML
+    private TextField numerStolika;
+    @FXML
     private ComboBox<Food> daniaBox;
     private List<Reservation> reservations = new ArrayList<>();
     private List<Food> food = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
 
 
 
@@ -100,6 +104,30 @@ public class KelnerController extends WindowUtility {
             System.out.println("Błąd podczas zapisu do pliku JSON.");
         }
     }
+    private void loadOrdersFromJson() {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            String filePath = "src/main/resources/Orders.json";
+            java.io.File file = new java.io.File(filePath);
+
+            if (file.exists()) {
+                orders = objectMapper.readValue(file, new TypeReference<List<Order>>() {});
+                System.out.println("Załadowano zamówienia: " + orders.size());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    private void saveOrdersToJson() {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            String filePath = "src/main/resources/Orders.json";
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new java.io.File(filePath), orders);
+            System.out.println("Zapisano zamówienia do pliku.");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void setEmployee(Waiter waiter) {
         this.waiter = waiter;
@@ -124,6 +152,28 @@ public class KelnerController extends WindowUtility {
     }
 
     public void onZatwierdzButton(ActionEvent actionEvent) {
+        Food selectedFood = daniaBox.getSelectionModel().getSelectedItem();
+        boolean isVip = klientVip.isSelected();
+        String tableText = numerStolika.getText();
+
+        if (selectedFood == null || tableText == null || tableText.isEmpty()) {
+            System.out.println("Upewnij się, że wybrano danie i podano numer stolika.");
+            return;
+        }
+
+        try {
+            int tableNumber = Integer.parseInt(tableText);
+            loadOrdersFromJson();
+
+            Order order = new Order(selectedFood.toString(), tableNumber, isVip);
+
+            orders.add(order);
+            saveOrdersToJson();
+
+            System.out.println("Dodano zamówienie: " + selectedFood + ", stolik: " + tableNumber + ", VIP: " + isVip);
+        } catch (NumberFormatException e) {
+            System.out.println("Nieprawidłowy numer stolika. Podaj liczbę całkowitą.");
+        }
     }
 
     public void onExitButton(ActionEvent actionEvent) {

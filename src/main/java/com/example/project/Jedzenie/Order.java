@@ -1,18 +1,18 @@
 package com.example.project.Jedzenie;
 
 public class Order {
-    private Food food;
+    private String name;
     private int table;
     private boolean vip;
 
     public Order() {}
-    public Order(Food food, int table, boolean vip) {
-        this.food = food;
+    public Order(String name, int table, boolean vip) {
+        this.name = name;
         this.table = table;
         this.vip = vip;
     }
     public String getName() {
-        return food.toString();
+        return name;
     }
     public int getTable() {
         return table;
