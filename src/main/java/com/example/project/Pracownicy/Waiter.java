@@ -1,8 +1,9 @@
 package com.example.project.Pracownicy;
 
+import com.example.project.Jedzenie.Order;
 import com.example.project.System.Reservation;
 
-public class Waiter extends Employee implements cancelReservation, takeOrder {
+public class Waiter extends Employee implements cancelReservation {
     private int tip;
 
     public Waiter() {
@@ -29,6 +30,6 @@ public class Waiter extends Employee implements cancelReservation, takeOrder {
         reservation.changeStatus(false);
         System.out.println("Kelner " + getName() + " anulował rezerwację: " + reservation);
     }
-    public void takeOrder(){}
+
 
 }
