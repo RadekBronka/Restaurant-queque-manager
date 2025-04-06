@@ -442,4 +442,16 @@
   "reservationTime" : "16:21",
   "reservationDate" : "2025-04-29",
   "reservationStatus" : true
+}, {
+  "customerId" : 1,
+  "customerNumber" : 658850,
+  "reservationType" : "Samotna",
+  "customerCount" : 1,
+  "customerName" : "Radek",
+  "customerSurname" : "Brońka",
+  "customerEmail" : "radek@mail.com",
+  "reservationRank" : "student",
+  "reservationTime" : "20:30",
+  "reservationDate" : "2025-04-07",
+  "reservationStatus" : false
 } ]

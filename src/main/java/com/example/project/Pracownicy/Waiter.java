@@ -25,7 +25,10 @@ public class Waiter extends Employee implements cancelReservation, takeOrder {
         reservation.changeStatus(status);
     }
 
-    public void cancel(){}
+    public void cancelReservation(Reservation reservation) {
+        reservation.changeStatus(false);
+        System.out.println("Kelner " + getName() + " anulował rezerwację: " + reservation);
+    }
     public void takeOrder(){}
 
 }

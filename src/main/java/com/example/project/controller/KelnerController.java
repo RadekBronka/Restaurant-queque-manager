@@ -87,13 +87,33 @@ public class KelnerController extends WindowUtility {
             e.printStackTrace();
         }
     }
+    private void saveReservationsToJson() {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            // Ścieżka do pliku - zakładamy, że masz uprawnienia do zapisu w tym miejscu
+            String filePath = "src/main/resources/DataBase.json";
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new java.io.File(filePath), reservations);
+            System.out.println("Zapisano zaktualizowane rezerwacje do pliku.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Błąd podczas zapisu do pliku JSON.");
+        }
+    }
+
     public void setEmployee(Waiter waiter) {
         this.waiter = waiter;
         imieLabel.setText(waiter.getName());
     }
 
     public void onAnulujButton(ActionEvent actionEvent) {
-        //waiter.cancelReservation();
+        Reservation selectedReservation = reservationBox.getSelectionModel().getSelectedItem();
+        if (selectedReservation != null) {
+            waiter.cancelReservation(selectedReservation);
+
+            saveReservationsToJson();
+        } else {
+            System.out.println("Nie wybrano rezerwacji do anulowania.");
+        }
     }
 
     public void onDaniaBox(ActionEvent actionEvent) {
