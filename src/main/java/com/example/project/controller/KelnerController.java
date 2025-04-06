@@ -63,7 +63,7 @@ public class KelnerController extends WindowUtility {
 
         // Filtrujemy rezerwacje, ale najpierw sprawdzamy, czy reservationDate nie jest nu ll
         List<Reservation> filtered = reservations.stream()
-                .filter(r -> r.getReservationDate() != null && r.getReservationDate().equals(selectedDateStr))
+                .filter(r -> r.getReservationDate() != null && r.getReservationDate().equals(selectedDateStr) && r.getReservationStatus())
                 .sorted((r1, r2) -> r1.getReservationTime().compareTo(r2.getReservationTime()))
                 .collect(Collectors.toList());
 
@@ -75,13 +75,14 @@ public class KelnerController extends WindowUtility {
     private void loadReservationsFromJson() {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-            InputStream inputStream = getClass().getClassLoader().getResourceAsStream("DataBase.json");
+            String filePath = "src/main/resources/DataBase.json"; // ten sam jak przy zapisie
+            java.io.File file = new java.io.File(filePath);
 
-            if (inputStream != null) {
-                reservations = objectMapper.readValue(inputStream, new TypeReference<List<Reservation>>() {});
+            if (file.exists()) {
+                reservations = objectMapper.readValue(file, new TypeReference<List<Reservation>>() {});
                 System.out.println("Załadowano rezerwacje: " + reservations.size());
             } else {
-                System.out.println("Nie znaleziono pliku reservations.json!");
+                System.out.println("Nie znaleziono pliku DataBase.json!");
             }
         } catch (Exception e) {
             e.printStackTrace();
