@@ -465,7 +465,7 @@
   "reservationRank" : "student",
   "reservationTime" : "15:37",
   "reservationDate" : "2025-04-14",
-  "reservationStatus" : true
+  "reservationStatus" : false
 }, {
   "customerId" : 2,
   "customerNumber" : 950823,

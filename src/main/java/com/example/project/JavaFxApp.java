@@ -19,8 +19,6 @@ public class JavaFxApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/templates/main-page.fxml"));
-        loader.setControllerFactory(springContext::getBean);
-
         Scene scene = new Scene(loader.load(), 200, 200);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Restaurant Queue Manager");

@@ -38,7 +38,16 @@ public class KucharzController extends WindowUtility{
     }
 
     public void onWydajButton(ActionEvent actionEvent) {
+        int selectedIndex = zamowieniaList.getSelectionModel().getSelectedIndex();
 
+        if (selectedIndex >= 0 && selectedIndex < orders.size()) {
+            Order removedOrder = orders.remove(selectedIndex);
+            System.out.println("Usunięto zamówienie: " + removedOrder);
+            saveOrdersToJson();
+            wyswietlZamowienia();
+        } else {
+            System.out.println("Błędny wybór");
+        }
     }
     public void onExitButton(ActionEvent actionEvent) {
         closeWindow(actionEvent);
