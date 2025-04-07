@@ -33,6 +33,7 @@
     <p><strong>Status:</strong> <span th:text="${reservation.reservationRank}"></span></p>
     <p><strong>Rodzaj:</strong> <span th:text="${reservation.reservationType}"></span></p>
     <p><strong>Liczba osób:</strong> <span th:text="${reservation.customerCount}"></span></p>
+    <p><strong>Status Rezerwacji: </strong><span th:text="${reservation.reservationStatus} ? 'Aktywna' : 'Anulowana'"></span></p>
 </main>
 
 <footer class="container-fluid bg-dark text-white text-center p-3">
